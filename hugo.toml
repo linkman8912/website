@@ -1,4 +1,3 @@
-baseURL = "https://example.org/"
 defaultContentLanguage = "en"
 # Automatically generate robots.txt
 enableRobotsTXT = true
