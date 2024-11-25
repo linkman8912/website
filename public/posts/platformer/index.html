@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Platformer</title>
+    <meta name="description" content="A platformer inspired by Celeste, made in Godot.">
+    <meta name="keywords" content=''>
+
+    <meta property="og:url" content="https://example.org/posts/platformer/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Platformer">
+    <meta property="og:description" content="A platformer inspired by Celeste, made in Godot.">
+    <meta property="og:image" content="https://example.org/images/platformer.png">
+    <meta property="og:image:secure_url" content="https://example.org/images/platformer.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Platformer">
+    <meta name="twitter:description" content="A platformer inspired by Celeste, made in Godot.">
+    <meta property="twitter:domain" content="https://example.org/posts/platformer/">
+    <meta property="twitter:url" content="https://example.org/posts/platformer/">
+    <meta name="twitter:image" content="https://example.org/images/platformer.png">
+
+    
+    <link rel="canonical" href="https://example.org/posts/platformer/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.3eb19cb61dde9e37b9522867f3e024aeb68e26ab8e03252e46e365abcb19acf7.js" integrity="sha256-PrGcth3enje5Uihn8&#43;AkrraOJquOAyUuRuNlq8sZrPc="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://example.org/">
+                <img src='/images/avatar.webp' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://example.org/">Linkman</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://example.org/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/linkman8912" aria-label="github" ><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://example.org/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/linkman8912" ><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Platformer</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">A platformer inspired by Celeste, made in Godot.</small>
+	
+
+	
+          <p class="post-date">November 25, 2024
+           
+          </p>
+	
+
+        <ul class="post-tags">
+          
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p><img src="/images/platformer.png" alt="Gameplay Screenshot">
+<a href="https://github.com/linkman8912/platformer">This is just a little platformer I made in Godot, to learn more about how it works.</a> It&rsquo;s still very much a work in progress, but I&rsquo;m trying to make walljumps and a Celeste-style dash. I&rsquo;ve gotten the walljumps to a place I&rsquo;m comfortable with, but the dash is difficult to get right. If I don&rsquo;t cancel the momentum at the end the character gets an unreasonable amount of upward momentum, but if I do, the dash is relatively unsatisfying.
+<div class="container">
+  <div id="player-wrapper" class="my-5"></div>
+</div>
+
+<script 
+  type="text/javascript" 
+  src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"
+>
+</script>
+
+<script>
+  var playerElement = document.getElementById("player-wrapper");
+
+  var player = new Clappr.Player({
+    source: "/videos/platformer.mp4",
+    mute: true,
+    height: 360,
+    width: 640
+  });
+
+  player.attachTo(playerElement);  
+</script>
+
+I settled on removing vertical momentum at the end of a dash but not horizontal momentum. I haven&rsquo;t tweaked the dash velocity very much, which I will do in the future</p>
+<p><a href="https://github.com/linkman8912/platformer">Github</a></p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
