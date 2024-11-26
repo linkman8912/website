@@ -4,7 +4,7 @@ description: "A platformer inspired by Celeste, made in Godot."
 image: "/images/platformer.png"
 lastmod: 2024-11-25
 showTableOfContents: false
-# tags: ["",]
+tags: ["Godot", "Game Dev"]
 title: "Platformer"
 type: "post"
 ---
