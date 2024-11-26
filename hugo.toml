@@ -4,7 +4,7 @@ enableRobotsTXT = true
 languageCode = "en"
 theme = "gokarna"
 title = "Linkman"
-baseURL = "linkman.is-a.dev"
+baseURL = "/"
 
 [menu]
   [[menu.main]]
